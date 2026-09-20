@@ -13,7 +13,7 @@ export default function Home() {
     <main className="relative w-full h-full text-white selection:bg-[var(--accent-red)] selection:text-white">
       {/* Background Video Engine */}
       <CinematicVideo />
-      
+
       {/* Navigation */}
       <Navbar />
 
@@ -21,8 +21,8 @@ export default function Home() {
       <div className="relative z-10 flex flex-col w-full h-full">
         <Hero />
         <About />
-        <Skills />
         <Experience />
+        <Skills />
         <Projects />
         <Certifications />
         <Contact />
