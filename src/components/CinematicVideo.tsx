@@ -47,7 +47,7 @@ export default function CinematicVideo() {
     let currentParallaxY = 0;
 
     const updateLoop = () => {
-      // 1. Video scrubbing logic
+      // 1. Video scrubbing logic (Fixed to prevent getting stuck)
       if (videoRef.current && readyRef.current) {
         if (isNaN(targetRef.current)) targetRef.current = 0;
         if (isNaN(currentRef.current)) currentRef.current = 0;
@@ -55,10 +55,13 @@ export default function CinematicVideo() {
         currentRef.current += (targetRef.current - currentRef.current) * 0.10;
         
         if (Math.abs(targetRef.current - currentRef.current) > 0.001) {
-          try {
-             videoRef.current.currentTime = currentRef.current;
-          } catch {
-             // Ignore seek errors
+          // crucial fix: only update currentTime if the browser isn't already busy seeking
+          if (!videoRef.current.seeking) {
+            try {
+               videoRef.current.currentTime = currentRef.current;
+            } catch {
+               // Ignore seek errors
+            }
           }
         }
       }
