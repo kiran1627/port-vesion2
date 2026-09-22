@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useState, useEffect, useId } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, X, Code2 } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
@@ -325,10 +326,11 @@ function ProjectCard({ project, onClick }: { project: typeof projectsData[0], on
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="group relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur-sm p-6 overflow-hidden h-full flex flex-col transition-all duration-300 cursor-pointer hover:border-[var(--accent-red)]/50"
+      className="group relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur-sm p-6 overflow-hidden h-full flex flex-col transition-colors duration-300 cursor-pointer hover:border-[var(--accent-red)]/50"
       style={{
         transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
         transformStyle: 'preserve-3d',
+        willChange: 'transform'
       }}
     >
       {/* Spotlight Effect */}
@@ -381,6 +383,11 @@ function ProjectCard({ project, onClick }: { project: typeof projectsData[0], on
 
 export default function Projects() {
   const [activeProject, setActiveProject] = useState<typeof projectsData[0] | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <section id="projects" className="relative py-32 overflow-hidden">
@@ -404,14 +411,17 @@ export default function Projects() {
         
       </div>
 
-      <AnimatePresence>
-        {activeProject && (
-          <ProjectDetailsModal
-            project={activeProject}
-            onClose={() => setActiveProject(null)}
-          />
-        )}
-      </AnimatePresence>
+      {mounted && createPortal(
+        <AnimatePresence>
+          {activeProject && (
+            <ProjectDetailsModal
+              project={activeProject}
+              onClose={() => setActiveProject(null)}
+            />
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </section>
   );
 }
