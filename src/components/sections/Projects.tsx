@@ -323,7 +323,7 @@ function ProjectCard({ project, onClick }: { project: typeof projectsData[0], on
       viewport={{ once: true }}
       className="group relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur-sm p-6 overflow-hidden h-full flex flex-col transition-all duration-300 cursor-pointer hover:border-[var(--accent-red)]/50"
       style={{
-        transform: \`perspective(1000px) rotateX(\${rotateX}deg) rotateY(\${rotateY}deg)\`,
+        transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
         transformStyle: 'preserve-3d',
       }}
     >
@@ -332,7 +332,7 @@ function ProjectCard({ project, onClick }: { project: typeof projectsData[0], on
         className="absolute inset-0 pointer-events-none transition-opacity duration-300 z-0 mix-blend-screen"
         style={{
           opacity: spotlight.opacity,
-          background: \`radial-gradient(600px circle at \${spotlight.x}% \${spotlight.y}%, \${project.glow}, transparent 40%)\`
+          background: `radial-gradient(600px circle at ${spotlight.x}% ${spotlight.y}%, ${project.glow}, transparent 40%)`
         }}
       />
 
