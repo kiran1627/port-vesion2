@@ -160,7 +160,7 @@ const ProjectDetailsModal = ({ project, onClose }: { project: typeof projectsDat
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/80 backdrop-blur-md"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 bg-black/80 backdrop-blur-md"
       role="presentation"
       onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
       initial={{ opacity: 0 }}
