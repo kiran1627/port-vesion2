@@ -223,6 +223,7 @@ const ProjectDetailsModal = ({ project, onClose }: { project: typeof projectsDat
             <Code2 size={20} className="text-[var(--accent-red)]" /> System Architecture
           </h4>
           <div className="rounded-xl border border-white/10 overflow-hidden bg-white/5 p-4 flex justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={project.architecture}
               alt={`${project.title} architecture diagram`}

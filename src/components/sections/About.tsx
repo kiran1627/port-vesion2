@@ -39,7 +39,7 @@ export default function About() {
                 <span className="text-[var(--accent-red)]">&gt;</span> Initialize bio protocol...
               </p>
               <p className="text-white">
-                Hi, I'm Kiran Babu Bandela, a GenAI/RAG Engineer pursuing a B.Tech in Artificial Intelligence & Machine Learning at JNTUH, Hyderabad (graduating May 2026).
+                Hi, I&apos;m Kiran Babu Bandela, a GenAI/RAG Engineer pursuing a B.Tech in Artificial Intelligence & Machine Learning at JNTUH, Hyderabad (graduating May 2026).
               </p>
               <p>
                 I own the AI microservice behind SurakshaGrid, a public-safety platform running live across 5 Telangana government departments. It runs a hybrid retrieval pipeline — BM25 keyword search fused with Qdrant vector search via reciprocal rank fusion, then reranked with a BGE cross-encoder — serving a self-hosted Qwen3-8B model for grounded, low-hallucination responses.
