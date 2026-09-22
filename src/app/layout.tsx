@@ -29,7 +29,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${oswald.variable} ${syne.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
-      <head />
+      <head>
+        <meta name="google-site-verification" content="IinthXweeh2z6UGkTIkEjQc97U7l6VM1VzDJo9sEFjw" />
+      </head>
       <body className="antialiased">
         <LenisProvider>
           <CustomCursor />
