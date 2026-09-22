@@ -181,13 +181,15 @@ const ProjectDetailsModal = ({ project, onClose }: { project: typeof projectsDat
         exit={{ opacity: 0, y: 20, scale: 0.97 }}
         transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
       >
-        <button 
-          className="absolute top-6 right-6 p-2 bg-white/5 hover:bg-white/10 rounded-full text-white transition-colors z-10" 
-          onClick={onClose} 
-          aria-label="Close project details"
-        >
-          <X size={20} />
-        </button>
+        <div className="sticky top-0 z-50 flex justify-end mb-4 pt-4 -mt-4 bg-[#0a0a0a]/80 backdrop-blur-md pb-4 border-b border-white/5">
+          <button 
+            className="p-2 bg-white/5 hover:bg-[var(--accent-red)] rounded-full text-white transition-colors shadow-lg border border-white/10" 
+            onClick={onClose} 
+            aria-label="Close project details"
+          >
+            <X size={20} />
+          </button>
+        </div>
 
         <div className="mb-8 pr-12">
           <span className="text-[var(--accent-red)] font-bold text-sm tracking-wider uppercase mb-2 block font-[var(--font-jetbrains-mono)]">Project {project.index}</span>
