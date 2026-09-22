@@ -31,6 +31,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${oswald.variable} ${syne.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
       <head>
         <meta name="google-site-verification" content="IinthXweeh2z6UGkTIkEjQc97U7l6VM1VzDJo9sEFjw" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Kiran Babu Bandela",
+              "alternateName": "Kiran Babu",
+              "url": "https://kiranbabu-portfilo.vercel.app",
+              "jobTitle": "AI/ML Engineer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "IKCON Digital"
+              },
+              "sameAs": [
+                "https://github.com/kiran1627"
+              ]
+            })
+          }}
+        />
       </head>
       <body className="antialiased">
         <LenisProvider>
