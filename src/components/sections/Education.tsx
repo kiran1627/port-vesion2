@@ -47,7 +47,7 @@ export default function Education() {
         {/* ── Header ── */}
         <div className="section-header">
           <div className="reveal">
-            <p className="section-number mb-3">06 // Education</p>
+            <p className="section-number mb-3">Education</p>
             <h2
               className="font-oswald font-bold uppercase"
               style={{ fontSize: "clamp(2.5rem,5vw,4rem)", color: "var(--text)", lineHeight: 1.05 }}

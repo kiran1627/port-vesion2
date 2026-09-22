@@ -37,7 +37,7 @@ export default function Skills() {
         {/* Section Header */}
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-[var(--font-oswald)] uppercase tracking-tighter">
-            <span className="text-[var(--accent-red)]">03.</span> TECH_STACK
+            TECH_STACK
           </h2>
           <div className="h-px w-full max-w-sm bg-gradient-to-r from-[var(--accent-red)] to-transparent mt-4" />
         </div>

@@ -11,7 +11,7 @@ const timelineData = [
     organization: 'IKCON Digital IT Services Pvt Ltd',
     period: 'Jun 2026 - Present',
     location: 'Hyderabad, India',
-    description: 'Designed Cortex AI chatbot (RAG + Qwen3-8B) for UMS. Built SurakshaGrid government emergency-response platform using FastAPI, Gemini, and XGBoost. Developed a function-calling LLM chatbot (Ollama qwen2.5:7b-instruct).'
+    description: 'Designed Cortex AI chatbot (RAG + Qwen3-8B) for UMS. Built SurakshaGrid government emergency-response platform using FastAPI, Gemini, and XGBoost. Developed a function-calling LLM chatbot (Ollama qwen2.5:7b-instruct). Owned the AI microservice behind SurakshaGrid (live across 5 Telangana govt depts). Built a hybrid RAG pipeline: BM25 + Qdrant (RRF fusion), BGE reranking, self-hosted Qwen3-8B. Built SETU GRID, a real-time WebSocket coordination layer.'
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const timelineData = [
     organization: 'Placemantra',
     period: 'Jan 2025 - Mar 2025',
     location: 'India',
-    description: 'Cleaned and prepped text data for NLP models. Trained PyTorch/TensorFlow models improving accuracy by 12%. Set up MLflow for reproducible experiments.'
+    description: 'Cleaned and prepped text data for NLP models. Trained PyTorch/TensorFlow models improving accuracy by 12%. Set up MLflow for reproducible experiments. Tuned models for a placement-matching pipeline.'
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const timelineData = [
     organization: 'Jawaharlal Nehru Technological University Hyderabad (JNTUH)',
     period: 'Nov 2022 - May 2026',
     location: 'Hyderabad, India',
-    description: 'CGPA: 7.76'
+    description: 'CGPA: 7.76. Finalist — TASK / SAP Innovation Marathon (2024) for an AI-enabled Smart Blood Donation System.'
   }
 ];
 
@@ -46,7 +46,7 @@ export default function Experience() {
         <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold font-[var(--font-oswald)] uppercase tracking-tighter">
-              <span className="text-[var(--accent-red)]">04.</span> JOURNEY
+              JOURNEY
             </h2>
             <div className="h-px w-full max-w-sm bg-gradient-to-r from-[var(--accent-red)] to-transparent mt-4" />
           </div>

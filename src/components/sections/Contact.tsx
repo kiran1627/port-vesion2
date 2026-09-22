@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Copy, Check, Mail } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { Copy, Check, Mail, FileText } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -25,7 +25,7 @@ export default function Contact() {
         {/* Section Header */}
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-[var(--font-oswald)] uppercase tracking-tighter text-center">
-            <span className="text-[var(--accent-red)]">07.</span> INITIATE_CONTACT
+            INITIATE_CONTACT
           </h2>
           <div className="h-px w-full max-w-sm bg-gradient-to-r from-transparent via-[var(--accent-red)] to-transparent mx-auto mt-4" />
         </div>
@@ -45,16 +45,17 @@ export default function Contact() {
             <div className="p-2 bg-[var(--accent-red)]/20 rounded-full text-[var(--accent-red)] group-hover:bg-[var(--accent-red)] group-hover:text-white transition-colors">
               {copied ? <Check size={20} /> : <Copy size={20} />}
             </div>
-            <span className="text-xl md:text-2xl font-[var(--font-jetbrains-mono)] font-bold tracking-tight text-white group-hover:text-[var(--accent-red)] transition-colors">
+            <span className="text-lg md:text-xl font-[var(--font-jetbrains-mono)] font-bold tracking-tight text-white group-hover:text-[var(--accent-red)] transition-colors break-all">
               {email}
             </span>
           </div>
 
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center flex-wrap gap-6">
             {[
               { icon: FaGithub, href: 'https://github.com/kiran1627', label: 'GitHub' },
-              { icon: FaLinkedin, href: 'https://linkedin.com/in/kiran', label: 'LinkedIn' }, // Placeholder
-              { icon: FaTwitter, href: 'https://twitter.com/kiran', label: 'Twitter' }, // Placeholder
+              { icon: FaLinkedin, href: 'https://linkedin.com/in/kiranbabu18', label: 'LinkedIn' },
+              { icon: FaWhatsapp, href: 'https://wa.me/919381342247', label: 'WhatsApp' },
+              { icon: FileText, href: '/Kiran_Resume.pdf', label: 'Resume' },
               { icon: Mail, href: `mailto:${email}`, label: 'Email' },
             ].map((social) => (
               <a
