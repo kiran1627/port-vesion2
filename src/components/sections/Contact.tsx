@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Copy, Check, Mail } from 'lucide-react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Copy, Check, Mail, FileText } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -55,6 +55,8 @@ export default function Contact() {
               { icon: FaGithub, href: 'https://github.com/kiran1627', label: 'GitHub' },
               { icon: FaLinkedin, href: 'https://linkedin.com/in/kiranbabu18', label: 'LinkedIn' },
               { icon: Mail, href: `mailto:${email}`, label: 'Email' },
+              { icon: FaWhatsapp, href: 'https://wa.me/919381342247', label: 'WhatsApp' },
+              { icon: FileText, href: '/Kiran_Resume.pdf', label: 'Resume' },
             ].map((social) => (
               <a
                 key={social.label}
@@ -68,24 +70,6 @@ export default function Contact() {
                 <social.icon size={24} />
               </a>
             ))}
-            <a
-              href="https://wa.me/919381342247"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 border border-white/10 rounded-full text-gray-400 hover:text-[var(--accent-red)] hover:border-[var(--accent-red)]/50 transition-colors bg-black/50 font-[var(--font-jetbrains-mono)] text-sm font-bold flex items-center gap-2"
-              aria-label="WhatsApp"
-            >
-              WhatsApp
-            </a>
-            <a
-              href="/Kiran_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 border border-white/10 rounded-full text-gray-400 hover:text-[var(--accent-red)] hover:border-[var(--accent-red)]/50 transition-colors bg-black/50 font-[var(--font-jetbrains-mono)] text-sm font-bold flex items-center gap-2"
-              aria-label="Resume"
-            >
-              Resume
-            </a>
           </div>
         </div>
       </div>
