@@ -11,7 +11,14 @@ const timelineData = [
     organization: 'IKCON Digital IT Services Pvt Ltd',
     period: 'Jun 2026 - Present',
     location: 'Hyderabad, India',
-    description: 'Designed Cortex AI chatbot (RAG + Qwen3-8B) for UMS. Built SurakshaGrid government emergency-response platform using FastAPI, Gemini, and XGBoost. Developed a function-calling LLM chatbot (Ollama qwen2.5:7b-instruct). Owned the AI microservice behind SurakshaGrid (live across 5 Telangana govt depts). Built a hybrid RAG pipeline: BM25 + Qdrant (RRF fusion), BGE reranking, self-hosted Qwen3-8B. Built SETU GRID, a real-time WebSocket coordination layer.'
+    description: [
+      'Designed and deployed the Cortex AI chatbot using a scalable RAG architecture and Qwen3-8B for the University Management System (UMS).',
+      'Built SurakshaGrid, a robust government emergency-response platform utilizing FastAPI, Gemini models, and XGBoost predictive analytics.',
+      'Owned the entire AI microservice architecture behind SurakshaGrid, which is currently live and adopted across 5 Telangana government departments.',
+      'Developed an advanced function-calling LLM chatbot using Ollama (qwen2.5:7b-instruct) for automated task execution.',
+      'Architected a hybrid RAG pipeline combining BM25 keyword search, Qdrant vector retrieval with RRF fusion, BGE reranking, and self-hosted Qwen3-8B.',
+      'Built SETU GRID, a real-time WebSocket coordination layer enabling instantaneous cross-department communication.'
+    ]
   },
   {
     id: 2,
@@ -20,7 +27,12 @@ const timelineData = [
     organization: 'Placemantra',
     period: 'Jan 2025 - Mar 2025',
     location: 'India',
-    description: 'Cleaned and prepped text data for NLP models. Trained PyTorch/TensorFlow models improving accuracy by 12%. Set up MLflow for reproducible experiments. Tuned models for a placement-matching pipeline.'
+    description: [
+      'Cleaned and preprocessed large-scale text data for natural language processing models.',
+      'Trained PyTorch and TensorFlow models, successfully improving baseline accuracy by 12%.',
+      'Set up MLflow for tracking parameters and ensuring reproducible model experiments.',
+      'Fine-tuned hyper-parameters for an advanced automated placement-matching pipeline.'
+    ]
   },
   {
     id: 3,
@@ -29,7 +41,10 @@ const timelineData = [
     organization: 'Jawaharlal Nehru Technological University Hyderabad (JNTUH)',
     period: 'Nov 2022 - May 2026',
     location: 'Hyderabad, India',
-    description: 'CGPA: 7.76. Finalist — TASK / SAP Innovation Marathon (2024) for an AI-enabled Smart Blood Donation System.'
+    description: [
+      'Current CGPA: 7.76',
+      'Finalist — TASK / SAP Innovation Marathon (2024) for developing an AI-enabled Smart Blood Donation System.'
+    ]
   }
 ];
 
@@ -102,7 +117,7 @@ export default function Experience() {
                     </div>
 
                     {/* Content Card */}
-                    <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${isEven ? 'md:pr-16 text-left md:text-right' : 'md:pl-16 text-left'}`}>
+                    <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${isEven ? 'md:pr-16 text-left' : 'md:pl-16 text-left'}`}>
                       <div className="p-6 border border-white/10 bg-black/40 backdrop-blur-sm rounded-xl hover:border-[var(--accent-red)]/30 transition-colors group">
                         <div className="flex flex-col gap-2 mb-4">
                           <span className="text-xs font-[var(--font-jetbrains-mono)] text-[var(--accent-red)]">
@@ -115,9 +130,11 @@ export default function Experience() {
                             {item.organization} &bull; {item.location}
                           </div>
                         </div>
-                        <p className="text-gray-300 text-sm leading-relaxed">
-                          {item.description}
-                        </p>
+                        <ul className="text-gray-300 text-sm leading-relaxed space-y-2 list-disc list-outside ml-4 mt-4">
+                          {Array.isArray(item.description) 
+                            ? item.description.map((point, i) => <li key={i}>{point}</li>)
+                            : <li>{item.description}</li>}
+                        </ul>
                       </div>
                     </div>
                   </motion.div>

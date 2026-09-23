@@ -21,11 +21,15 @@ const skillCategories = [
   },
   {
     title: 'Databases',
-    skills: ['Qdrant', 'FAISS', 'Pinecone', 'MySQL', 'SQLite']
+    skills: ['Qdrant', 'FAISS', 'Pinecone', 'MySQL', 'SQLite','postgresql']
   },
   {
-    title: 'Data & Programming',
-    skills: ['Python', 'Pandas', 'NumPy', 'EDA', 'Git', 'GitHub', 'Power BI']
+    title: 'Programming',
+    skills: ['Python', 'OOPs', 'Git', 'GitHub']
+  },
+  {
+    title: 'Data Science',
+    skills: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'EDA', 'Feature Engineering', 'Data Visualization', 'Power BI']
   },
 ];
 
@@ -37,7 +41,7 @@ export default function Skills() {
         {/* Section Header */}
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-[var(--font-oswald)] uppercase tracking-tighter">
-            TECH_STACK
+            TECH STACK
           </h2>
           <div className="h-px w-full max-w-sm bg-gradient-to-r from-[var(--accent-red)] to-transparent mt-4" />
         </div>
