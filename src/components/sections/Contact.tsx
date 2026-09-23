@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Copy, Check, Mail } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
