@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Kiran Babu Bandela — AI/ML Engineer specializing in Generative AI, RAG, Agentic Systems, LangGraph, and FastAPI. Building AI products at IKCON Digital, Hyderabad.",
   keywords: [
-    "AI/ML Engineer", "Generative AI", "RAG", "LangGraph", "LangChain",
-    "Multi-Agent Systems", "FastAPI", "PyTorch", "Kiran Babu Bandela", "Hyderabad",
+    "AI/ML Engineer", "Generative AI", "Top Generative AI Engineer", "Top Gen AI Engineer", "RAG", "LangGraph", "LangChain",
+    "Multi-Agent Systems", "FastAPI", "PyTorch", "Kiran Babu Bandela", "Kiran Babu", "Hyderabad",
   ],
   authors: [{ name: "Kiran Babu Bandela", url: "https://github.com/kiran1627" }],
   openGraph: {
