@@ -25,7 +25,7 @@ export default function Contact() {
         {/* Section Header */}
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-[var(--font-oswald)] uppercase tracking-tighter text-center">
-            <span className="text-[var(--accent-red)]">07.</span> INITIATE_CONTACT
+            <span className="text-[var(--accent-red)]"></span> INITIATE_CONTACT
           </h2>
           <div className="h-px w-full max-w-sm bg-gradient-to-r from-transparent via-[var(--accent-red)] to-transparent mx-auto mt-4" />
         </div>
